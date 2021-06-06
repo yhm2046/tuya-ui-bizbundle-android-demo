@@ -24,11 +24,10 @@
 
         <meta-data
             android:name="TUYA_SMART_APPKEY"
-            android:value="${TUYA_SMART_APPKEY}" />
-
+            android:value="mnc57s5mwpuxswxf39ya" />
         <meta-data
             android:name="TUYA_SMART_SECRET"
-            android:value="${TUYA_SMART_SECRET}" />
+            android:value="gt4jd95n7kv3npeyndqdfufnygheuemh" />
 
         <!-- demo use only start -->
         <activity
