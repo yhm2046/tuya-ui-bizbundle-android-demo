@@ -1,6 +1,8 @@
 package com.tuya.smart.bizubundle.ipc.demo;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,7 +33,8 @@ public class IPCPanelActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panel);
-        Toolbar toolbar = findViewById(R.id.toolbar_main);
+        Log.i("XWG","进入ipc界面IPCPanelActivity");
+        Toolbar toolbar = findViewById(R.id.toolbar_main);  //标题栏
         toolbar.setTitle("IPC Panel");
         RecyclerView homeRecycler = findViewById(R.id.home_recycler);
         homeRecycler.setLayoutManager(new LinearLayoutManager(this));
@@ -41,8 +44,16 @@ public class IPCPanelActivity extends AppCompatActivity {
         mAdapter.setOnItemClickListener(new HomeAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(ItemBean bean, int position) {
-                AbsPanelCallerService service = MicroContext.getServiceManager().findServiceByInterface(AbsPanelCallerService.class.getName());
+                Log.i("xwg","bean title:"+bean.getTitle()+",getDevId:"+bean.getDevId());
+//                AbsPanelCallerService ipc预览rn面板
+                try {
+                    AbsPanelCallerService service = MicroContext.getServiceManager().findServiceByInterface(AbsPanelCallerService.class.getName());
                 service.goPanelWithCheckAndTip(IPCPanelActivity.this, bean.getDevId());
+//                    service.goPanelWithCheckAndTip(new Activity(), bean.getDevId());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Log.i("XWG","click error："+e.toString());
+                }
             }
         });
         getCurrentHomeDetail();

@@ -2,6 +2,7 @@ package com.tuya.smart.bizubundle.demo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -169,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.panel).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("XWG","打开设备控制");
                 Intent i = new Intent();
                 i.setClassName(MainActivity.this, "com.tuya.smart.bizubundle.panel.demo.PanelActivity");
                 startActivity(i);
@@ -177,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.mall).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("XWG","商城业务");
                 Intent i = new Intent();
                 i.setClassName(MainActivity.this, "com.tuya.smart.bizubundle.mall.demo.MallActivity");
                 startActivity(i);
@@ -185,6 +188,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.scene).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("XWG","场景业务");
                 Intent i = new Intent();
                 i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.scene.demo.SceneActivity");
                 startActivity(i);
@@ -193,6 +197,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.ipc).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("XWG","ipc业务");
                 Intent i = new Intent();
                 i.setClassName(MainActivity.this, "com.tuya.smart.bizubundle.ipc.demo.IPCPanelActivity");
                 startActivity(i);
@@ -201,6 +206,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.cloud_storage).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("XWG","云存储业务");
                 Intent i = new Intent();
                 i.setClassName(MainActivity.this, "com.tuya.smart.bizubundle.cloudstorage.demo.CloudStorageActivity");
                 startActivity(i);
@@ -209,6 +215,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.activator).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("XWG","配网业务");
                 Intent i = new Intent();
                 i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.activator.demo.DeviceActivatorActivity");
                 startActivity(i);
@@ -217,6 +224,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.message).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("XWG","消息中心");
                 Intent i = new Intent();
                 i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.message.demo.MessageActivity");
                 startActivity(i);
@@ -225,6 +233,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.feedback).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("XWG","常见问题反馈");
                 Intent i = new Intent();
                 i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.demo.FeedBackActivity");
                 startActivity(i);
@@ -233,6 +242,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.ota).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("XWG","OTA");
                 Intent i = new Intent();
                 i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.ota.demo.OtaActivity");
                 startActivity(i);
@@ -241,6 +251,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.family).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("XWG","家庭管理制");
                 Intent i = new Intent();
                 i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.demo.family.FamilyManageActivity");
                 startActivity(i);
@@ -249,6 +260,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.device_detail).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("XWG","设备信息");
                 Intent i = new Intent();
                 i.setClassName(MainActivity.this, "com.tuya.smart.bizubundle.panelmore.demo.DeviceDetailActivity");
                 startActivity(i);
@@ -258,6 +270,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.location).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("XWG","地图");
                 Intent i = new Intent();
                 i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.demo.location.LocationActivity");
                 startActivity(i);

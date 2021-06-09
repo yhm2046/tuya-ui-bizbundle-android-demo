@@ -39,6 +39,7 @@ public class PanelActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 if (item.getItemId() == R.id.panel_clear) {
+//                    清除所有面板的缓存
                     ClearCacheService service = MicroContext.getServiceManager().findServiceByInterface(ClearCacheService.class.getName());
                     if (service != null) {
                         service.clearCache(PanelActivity.this);
@@ -58,6 +59,7 @@ public class PanelActivity extends AppCompatActivity {
         mAdapter.setOnItemClickListener(new HomeAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(ItemBean bean, int position) {
+//                打开设备面板
                 AbsPanelCallerService service = MicroContext.getServiceManager().findServiceByInterface(AbsPanelCallerService.class.getName());
                 if (bean.getGroupId() != 0) {
                     boolean isAdmin = null != TuyaHomeSdk.getDataInstance().getHomeBean(getService().getCurrentHomeId())

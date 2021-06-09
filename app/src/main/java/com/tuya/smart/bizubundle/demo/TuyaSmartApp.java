@@ -65,7 +65,7 @@ public class TuyaSmartApp extends Application {
                 }
             }
         });
-    }
+    }   //onCreate
 
     @Override
     protected void attachBaseContext(Context base) {
